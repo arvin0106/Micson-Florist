@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: #f9f9e6;
+  color: #000000;
+  position: scroll;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}  
+
+.footer .content {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem;
+}
+
+.footer .content p {
+  margin-bottom: 1.3rem;
+}
+
+.footer .content a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer .content a:hover {
+  border-bottom: 3px solid #971717;
+}
+
+.footer .content h4 {
+  margin-bottom: 1.3rem;
+  font-size: 19px;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+footer hr {
+  margin: 2rem 0;
+}
+
+@media (max-width: 767px) {
+  .footer .content {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  .footer {
+    position: unset;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer .content,
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .footer {
+    position: unset;
+  }
+}
+
+.category-bar {
+  background-color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.category-bar a {
+  color: #0b0b0b;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.category-bar a:hover {
+  color: #010101;
+}
+
+.category-bar a:first-child {
+  margin-left: 0;
+}
+
+.category-bar a:last-child {
+  margin-right: 0;
+}
+
+/* Add this to your CSS file to style the logo and title placement */
+
+.logo-title {
+  display: flex;
+  align-items: center; /* Vertically align logo and title */
+}
+
+.logo-title img {
+  max-width: 135px; /* Adjust the width as needed */
+  margin-right: 10px; /* Add spacing between logo and title */
+}
+
+.logo-title h1 {
+  font-size: 24px; /* Adjust the font size as needed */
+  margin: 0; /* Remove default margin for h1 */
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+}
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  /* Additional styles as needed */
+}
+
+

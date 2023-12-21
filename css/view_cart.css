@@ -1,0 +1,215 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: #f9f9e6;
+  color: #000000;
+  position: scroll;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}  
+
+.footer .content {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem;
+}
+
+.footer .content p {
+  margin-bottom: 1.3rem;
+}
+
+.footer .content a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer .content a:hover {
+  border-bottom: 3px solid #971717;
+}
+
+.footer .content h4 {
+  margin-bottom: 1.3rem;
+  font-size: 19px;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+footer hr {
+  margin: 2rem 0;
+}
+
+@media (max-width: 767px) {
+  .footer .content {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  .footer {
+    position: unset;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer .content,
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .footer {
+    position: unset;
+  }
+}
+
+.category-bar {
+  background-color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.category-bar a {
+  color: #0b0b0b;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.category-bar a:hover {
+  color: #010101;
+}
+
+.category-bar a:first-child {
+  margin-left: 0;
+}
+
+.category-bar a:last-child {
+  margin-right: 0;
+}
+
+/* Add this to your CSS file to style the logo and title placement */
+
+.logo-title {
+  display: flex;
+  align-items: center; /* Vertically align logo and title */
+}
+
+.logo-title img {
+  max-width: 135px; /* Adjust the width as needed */
+  margin-right: 10px; /* Add spacing between logo and title */
+}
+
+.logo-title h1 {
+  font-size: 24px; /* Adjust the font size as needed */
+  margin: 0; /* Remove default margin for h1 */
+}
+
+
+
+/*Tableeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee*/
+
+/* Apply styles to the container */
+.container {
+    margin-top: 3rem;
+  }
+  
+  /* Style the table */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+  
+  /* Style table header */
+  .table thead th {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 12px;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  /* Style table body */
+  .table tbody td {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 12px;
+  }
+  
+  /* Style table footer */
+  .table tfoot td {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 12px;
+  }
+  
+  /* Apply color to alternate table rows */
+  .table tbody tr:nth-child(even) {
+    background-color: rgb(239, 228, 191);
+  }
+  
+  /* Apply color to odd table rows */
+  .table tbody tr:nth-child(odd) {
+    background-color: rgb(239, 228, 191);
+  }
+  
+  /* Style the 'Continue Shopping' and 'Checkout' buttons */
+  .btn-success,
+  .btn-info {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for buttons */
+  .btn-success:hover,
+  .btn-info:hover {
+    background-color: #45a049;
+    cursor: pointer;
+  }
+  
+  /* Style the alert message */
+  .alert {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #ffeeba;
+    border: 1px solid #ffc107;
+    border-radius: 0.25rem;
+    color: #856404;
+  }
+   
+/*Endddddd Tableeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee*/
+  

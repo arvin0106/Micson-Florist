@@ -1,0 +1,350 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .footer {
+    background-color: #f9f9e6;
+    color: #000000;
+    position: scroll;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }  
+  
+  .footer .content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5rem;
+  }
+  
+  .footer .content p {
+    margin-bottom: 1.3rem;
+  }
+  
+  .footer .content a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .footer .content a:hover {
+    border-bottom: 3px solid #971717;
+  }
+  
+  .footer .content h4 {
+    margin-bottom: 1.3rem;
+    font-size: 19px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  footer hr {
+    margin: 2rem 0;
+  }
+  
+  @media (max-width: 767px) {
+    .footer .content {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+  
+    .footer {
+      position: unset;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer .content,
+    .footer {
+      font-size: 14px;
+    }
+  }
+  
+  @media (orientation: landscape) and (max-height: 500px) {
+    .footer {
+      position: unset;
+    }
+  }
+
+.category-bar {
+    background-color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.category-bar a {
+    color: #0b0b0b;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.category-bar a:hover {
+    color: #010101;
+}
+
+.category-bar a:first-child {
+    margin-left: 0;
+}
+
+.category-bar a:last-child {
+    margin-right: 0;
+}
+
+/* Add this to your CSS file to style the logo and title placement */
+
+.logo-title {
+    display: flex;
+    align-items: center; /* Vertically align logo and title */
+}
+
+.logo-title img {
+    max-width: 135px; /* Adjust the width as needed */
+    margin-right: 10px; /* Add spacing between logo and title */
+}
+
+.logo-title h1 {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin: 0; /* Remove default margin for h1 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+#home {
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home-left {
+    height: 300px;
+    position: relative;
+}
+
+.home-left img {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.home-right {
+    width: 50%;
+}
+
+.home-heading {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.home-para {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.btn {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    width: 0;
+}
+
+.btn:hover::after {
+    content: '';
+    height: 4px;
+    position: absolute;
+    background-color: aqua;
+    left: 0;
+    bottom: -10px;
+    animation: width;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    border-radius: 5px;
+}
+
+@keyframes width {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* Our Team */
+#our-Team {
+    width: 80%;
+    margin: 4rem auto 1rem;
+}
+
+#our-Team h2 {
+    text-align: center;
+    margin: 1rem auto 4rem;
+    position: relative;
+}
+
+#our-Team h2::after {
+    content: '';
+    height: 4px;
+    margin: 0 auto;
+    text-align: center;
+    width: 15%;
+    background-color: aqua;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    border-radius: 5px;
+    transform: translate(-50%);
+}
+
+.teamContainer {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.team-item h5 {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.team-item span {
+    margin-top: .4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(7, 176, 176);
+}
+
+.team-item img {
+    width: 150px;
+}
+
+footer {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 784px) {
+    #list {
+        display: none;
+    }
+
+    #hamBurger {
+        cursor: pointer;
+        display: block;
+        z-index: 20;
+        font-size: 2rem;
+    }
+
+    .navbar .responsive {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0%;
+        left: 100%;
+        padding: 2rem 0;
+        z-index: 2;
+        height: 100vh;
+        background-color: rgb(24, 23, 24);
+        width: 100%;
+        transition: all 0.5s linear;
+        opacity: 0.9;
+    }
+
+    .navbar ul li {
+        margin: 0.4rem 0;
+    }
+
+    .responsive.active {
+        left: 0%;
+    }
+
+    .goal-right {
+        width: 100%;
+        margin: 0 auto 2rem;
+    }
+
+    .goal-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    #goal {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 633px) {
+    #home {
+        flex-direction: column;
+    }
+
+    .home-left {
+        width: 100%;
+        height: auto;
+    }
+
+    .home-left img {
+        width: 100%;
+    }
+
+    .home-right {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .para {
+        width: 90%;
+    }
+
+    .num-container {
+        flex-direction: column;
+    }
+
+    .num-item {
+        margin: 1rem;
+    }
+
+    .teamContainer {
+        justify-content: center;
+    }
+}
