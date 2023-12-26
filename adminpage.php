@@ -1,37 +1,33 @@
 <?php
-// Establish a connection to the database
 $con = mysqli_connect("localhost", "root", "", "db_shopping_cart") or die(mysqli_error($con));
-
-// Fetch and display total Completed orders
 $pickupOrderQuery = "SELECT COUNT(*) as total_pickup FROM pickup_detail";
 $pickupOrderResult = mysqli_query($con, $pickupOrderQuery);
-
 if (!$pickupOrderResult) 
 {
     die('Error: ' . mysqli_error($con));
 }
 $pickupOrderData = mysqli_fetch_assoc($pickupOrderResult);
-
-//ship
 $shipOrderQuery = "SELECT COUNT(*) as total_ship FROM shipping_details";
 $shipOrderResult = mysqli_query($con, $shipOrderQuery);
 
-if (!$shipOrderResult) {
+if (!$shipOrderResult) 
+{
     die('Error: ' . mysqli_error($con));
 }
 
 $shipOrderData = mysqli_fetch_assoc($shipOrderResult);
+
 ?>
 
 <span style="font-family: verdana, geneva, sans-serif;"><!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <title>Admin Dashboard</title>
-      <link rel="stylesheet" href="style.css" />
-      <!-- Font Awesome Cdn Link -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
     <body>
 
       <div class="container">
@@ -106,6 +102,55 @@ $shipOrderData = mysqli_fetch_assoc($shipOrderResult);
               <button>1</button>
             </div>
           </div>
+
+          <canvas id="barChart" width="400" height="200"></canvas>
+          <script>
+  // Get the context of the canvas element
+  var ctx = document.getElementById('barChart').getContext('2d');
+
+  // Data for the bar chart
+  var data = {
+    labels: ['Total PickUp Order', 'Total Ship Order', 'Total Delivery Staff', 'Completed Order'],
+    datasets: [{
+      label: 'Orders',
+      data: [
+        <?php echo $pickupOrderData['total_pickup']; ?>,
+        <?php echo $shipOrderData['total_ship']; ?>,
+        1, // Total Delivery Staff (replace with your actual data)
+        1  // Completed Order (replace with your actual data)
+      ],
+      backgroundColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+      ],
+      borderColor: [
+        'rgba(255,99,132,1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+      ],
+      borderWidth: 1
+    }]
+  };
+
+  // Configuration options
+  var options = {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  };
+
+  // Create the bar chart
+  var myBarChart = new Chart(ctx, {
+    type: 'bar',
+    data: data,
+    options: options
+  });
+</script>
           
         </section>
       </div>
