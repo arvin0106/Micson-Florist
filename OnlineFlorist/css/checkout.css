@@ -1,0 +1,234 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  .footer {
+    background-color: #f9f9e6;
+    color: #000000;
+    position: scroll;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }  
+  
+  .footer .content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5rem;
+  }
+  
+  .footer .content p {
+    margin-bottom: 1.3rem;
+  }
+  
+  .footer .content a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .footer .content a:hover {
+    border-bottom: 3px solid #971717;
+  }
+  
+  .footer .content h4 {
+    margin-bottom: 1.3rem;
+    font-size: 19px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  footer hr {
+    margin: 2rem 0;
+  }
+  
+  @media (max-width: 767px) {
+    .footer .content {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+  
+    .footer {
+      position: unset;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer .content,
+    .footer {
+      font-size: 14px;
+    }
+  }
+  
+  @media (orientation: landscape) and (max-height: 500px) {
+    .footer {
+      position: unset;
+    }
+  }
+  
+
+  /*category-bar*/
+  
+  .category-bar {
+    background-color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .category-bar a {
+    color: #0b0b0b;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .category-bar a:hover {
+    color: #010101;
+  }
+  
+  .category-bar a:first-child {
+    margin-left: 0;
+  }
+  
+  .category-bar a:last-child {
+    margin-right: 0;
+  }
+  
+  /*end category-bar*/
+  
+  /*logo and title*/
+  
+  .logo-title {
+    display: flex;
+    align-items: center; /* Vertically align logo and title */
+  }
+  
+  .logo-title img {
+    max-width: 135px; /* Adjust the width as needed */
+    margin-right: 10px; /* Add spacing between logo and title */
+  }
+  
+  .logo-title h1 {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin: 0; /* Remove default margin for h1 */
+  }
+  
+  /*end logo and title*/
+
+/*formmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+
+.container {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Additional Styles */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-group.col-md-6 {
+  width: calc(50% - 10px);
+}
+
+.form-check {
+  margin-bottom: 10px;
+}
+
+/*formmmmmm*/
+
+/* Add custom CSS for PICKUP INFORMATION table if needed */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+  background-color: #f0f8ff; /* Light blue background color */
+  }
+
+  .table th,
+  .table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  }
+
+  .table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+  }
+
+  .table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+  }
+
+  .center-align-multiline {
+  text-align: center; /* Aligns text content within the cell */
+  }
+
+  .center-align-multiline {
+    text-align: center; /* Aligns text content within the cell */
+    }
+
+/*date collum*/
+.form-control_1 {
+  width: 206%; /* Fills the available space within the form-group */
+  padding: 8px; /* Adjust padding as needed */
+  }
+
+
+  

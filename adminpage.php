@@ -1,4 +1,5 @@
 <?php
+session_start();
 $con = mysqli_connect("localhost", "root", "", "db_shopping_cart") or die(mysqli_error($con));
 $pickupOrderQuery = "SELECT COUNT(*) as total_pickup FROM pickup_detail";
 $pickupOrderResult = mysqli_query($con, $pickupOrderQuery);
@@ -27,6 +28,41 @@ $shipOrderData = mysqli_fetch_assoc($shipOrderResult);
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+  <style>
+        /* Your existing styles */
+
+        body {
+            background: rgb(239, 228, 191);
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        nav {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            height: 1000px;
+            left: 0;
+            background: rgb(235, 211, 145);
+            width: 500px;
+            overflow: hidden;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+            flex: 0 0 330px; /* Set the initial state to visible */
+        }
+
+        /* Add the new styles */
+        #toggleButton {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 999;
+        }
+    </style>
 </head>
     <body>
 
@@ -37,7 +73,7 @@ $shipOrderData = mysqli_fetch_assoc($shipOrderResult);
               <img src="logo.jpeg" alt="">  
             </a></i>
             <div class="adminname">
-              <h1>Zavier</h1>
+              <h1><?php echo isset($_SESSION['username']) ? $_SESSION['username'] : ''; ?></h1>
             </div>
             <i><a href="adminpage.php">
               <i class="fas fa-home"></i>
@@ -47,7 +83,11 @@ $shipOrderData = mysqli_fetch_assoc($shipOrderResult);
               <i class="fas fa-boxes"></i>
               <span class="nav-item">Product List</span>
             </a></i>
-            <i><a href="pickup.php">
+            <i><a href="complete.php">
+              <i class="fas fa-clipboard-list"></i>
+              <span class="nav-item">Order List</span>
+            </a></i>
+            <i><a href="arvinpickup.php">
               <i class="fas fa-handshake"></i>
               <span class="nav-item">Pick Up List</span>
             </a></i>
@@ -55,17 +95,17 @@ $shipOrderData = mysqli_fetch_assoc($shipOrderResult);
               <i class="fas fa-truck"></i>
               <span class="nav-item">Shipment List</span>
             </a></i>
-            <i><a href="deliverystaff.html">
+            <i><a href="deliverystaff.php">
               <i class="fas fa-people-carry"></i>
               <span class="nav-item">Delivery Staff List</span>
-            </a></i>
-            <i><a href="completeorder.html">
-              <i class="fas fa-clipboard-list"></i>
-              <span class="nav-item">Completed Order List</span>
             </a></i>
             <i><a href="customer.php">
               <i class="fas fa-address-book"></i>
               <span class="nav-item">Customer List</span>
+            </a></i>
+            <i><a href="contact.php">
+              <i class="fas fa-phone"></i>
+              <span class="nav-item">Contact Message</span>
             </a></i>
             <i><a href="login.php" class="logout">
               <i class="fas fa-sign-out-alt"></i>
@@ -102,6 +142,9 @@ $shipOrderData = mysqli_fetch_assoc($shipOrderResult);
               <button>1</button>
             </div>
           </div>
+          <div id="toggleButton" onclick="toggleContainerVisibility()">
+        <i class="fas fa-bars"></i>  Menu
+    </div>
 
           <canvas id="barChart" width="400" height="200"></canvas>
           <script>
@@ -154,5 +197,16 @@ $shipOrderData = mysqli_fetch_assoc($shipOrderResult);
           
         </section>
       </div>
+      <script>
+
+        var originalFlex = '0 0 330px';
+        function toggleContainerVisibility() {
+        var nav = document.querySelector('.container nav');
+        var currentFlex = window.getComputedStyle(nav).getPropertyValue('flex');
+        
+        // Toggle between the original width and 0px
+        nav.style.flex = (currentFlex === '0 0 0px' || currentFlex === '0px 0px 0px') ? originalFlex : '0 0 0px';
+        }
+    </script>
     </body>
     </html></span>

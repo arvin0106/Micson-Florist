@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+/*category-bar*/
+
+.category-bar {
+  background-color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.category-bar a {
+  color: #0b0b0b;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.category-bar a:hover {
+  color: #010101;
+}
+
+.category-bar a:first-child {
+  margin-left: 0;
+}
+
+.category-bar a:last-child {
+  margin-right: 0;
+}
+
+/*end category-bar*/
+
+/*logo and title*/
+
+.logo-title {
+  display: flex;
+  align-items: center; /* Vertically align logo and title */
+}
+
+.logo-title img {
+  max-width: 135px; /* Adjust the width as needed */
+  margin-right: 10px; /* Add spacing between logo and title */
+}
+
+.logo-title h1 {
+  font-size: 24px; /* Adjust the font size as needed */
+  margin: 0; /* Remove default margin for h1 */
+}
+
+/*end logo and title*/
+
+
+

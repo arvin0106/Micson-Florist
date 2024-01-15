@@ -4,11 +4,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require __DIR__ . "/vendor/autoload.php";
+require __DIR__ . '/vendor/autoload.php';
 
 $mail = new PHPMailer(true);
 
-$mail->SMTPDebug = SMTP::DEBUG_OFF; // Set to SMTP::DEBUG_SERVER, SMTP::DEBUG_CLIENT, or SMTP::DEBUG_OFF
+$mail->SMTPDebug = SMTP::DEBUG_SERVER; // Set to SMTP::DEBUG_SERVER, SMTP::DEBUG_CLIENT, or SMTP::DEBUG_OFF
 $mail->isSMTP();
 $mail->SMTPAuth = true;
 $mail->Host = "smtp.gmail.com";
@@ -21,5 +21,6 @@ $mail->isHTML(true);
 
 // Set the sender's name and address
 $mail->setFrom("micsonflorist@gmail.com", "Micson");
+
 
 return $mail;
